@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Avalon</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+</head>
+<body>
+	<h1>Welcome to Avalon</h1>
+	<form onsubmit="return false;">
+		<label for="username">Create a username:</label>
+		<input type="text" id="username" name="username">
+		<button type="button" onclick="showOptions()">Enter</button>
+	</form>
+	<div id="options" style="display:none">
+		<p>What would you like to do?</p>
+		<button type="button" onclick="createGame()">Create a Game</button>
+		<button type="button" onclick="joinGame()">Join a Game</button>
+	</div>
+	<script type="module" src="firebase.js"></script>
+	<script src="function.js"></script>
+</body>
+</html>
