@@ -9,7 +9,20 @@
 	<p>Game Code: <span id="gameCode"></span></p>
 	<h2>Players</h2>
 	<ul id="players"></ul>
+	<button id="startGameButton" style="display: none;">Start Game</button>
 	<script>
+		let numberOfPlayers = 0;
+		
+		function checkNumberOfPlayers() {
+			let players = document.querySelectorAll("#players li");
+			numberOfPlayers = players.length;
+			if (numberOfPlayers >= 0) { // Change this to the minimum number of players required to start the game
+				document.getElementById("startGameButton").style.display = "block";
+			} else {
+				document.getElementById("startGameButton").style.display = "none";
+			}
+		}
+		
 		window.onload = function() {
 			let code = localStorage.getItem("gameCode");
 			if (code) {
@@ -22,8 +35,14 @@
 				let li = document.createElement("li");
 				li.textContent = username;
 				document.getElementById("players").appendChild(li);
+				checkNumberOfPlayers();
 			}
 		};
+		
+		document.getElementById("startGameButton").addEventListener("click", function() {
+			window.location.href = "game.html";
+		});
+		
 	</script>
 </body>
 </html>
