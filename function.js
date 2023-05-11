@@ -1,6 +1,7 @@
 function showOptions() {
     let username = document.getElementById("username").value;
     if (username) {
+        localStorage.setItem("username", username); // Store the player's username in localStorage
         document.getElementById("options").style.display = "block";
         document.querySelector("form").style.display = "none";
     } else {
