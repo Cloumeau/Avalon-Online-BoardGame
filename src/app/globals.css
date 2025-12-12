@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cinzel: 'Cinzel', serif;
+  --font-cormorant: 'Cormorant', serif;
+}
+
+body {
+  font-family: var(--font-cormorant);
+  background: #0a0a0f;
+  color: #e8e8e8;
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative px-8 py-3 bg-gradient-to-r from-gold-dark via-gold to-gold-dark 
+           text-midnight-900 font-display font-semibold tracking-wider uppercase
+           rounded transition-all duration-300 overflow-hidden
+           hover:shadow-[0_0_30px_rgba(212,168,70,0.4)] active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 border-2 border-gold/50 text-gold font-display font-medium
+           tracking-wider uppercase rounded transition-all duration-300
+           hover:border-gold hover:bg-gold/10;
+  }
+
+  .card {
+    @apply bg-midnight-800/80 backdrop-blur-sm border border-gold/20 rounded-lg
+           shadow-[0_4px_30px_rgba(0,0,0,0.3)] transition-all duration-300
+           hover:border-gold/40;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 bg-midnight-700 border border-gold/30 rounded-lg
+           text-white placeholder:text-gray-500 font-body text-lg
+           transition-all duration-300 focus:border-gold focus:ring-2 
+           focus:ring-gold/20 focus:outline-none;
+  }
+
+  .quest-token {
+    @apply w-16 h-16 rounded-full flex items-center justify-center font-display
+           text-xl font-bold transition-all duration-300 border-4;
+  }
+
+  .quest-token.pending { @apply bg-midnight-700 border-gold/30 text-gold/50; }
+  .quest-token.success { @apply bg-royal border-royal-light text-white; }
+  .quest-token.fail { @apply bg-crimson border-crimson-light text-white; }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(212, 168, 70, 0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+}

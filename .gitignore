@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.backup
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# ML Models
+*.pkl
+*.joblib
+*.onnx
+models/
+*.h5
+*.ckpt
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Frontend build
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# Docker
+.dockerignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data (keep structure, ignore actual data)
+data/raw/
+data/processed/
+*.csv
+*.parquet
+*.json
+!data/sample/*.sql
+!data/schemas/*.sql
+
+# Secrets
+secrets/
+*.key
+*.pem
+*.cert
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+node_modules/*
